@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rostring.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyshin <kirikeria@gmai.com>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/06 14:57:34 by hyshin            #+#    #+#             */
+/*   Updated: 2020/10/06 14:57:42 by hyshin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -22,7 +34,7 @@ char	**ft_split(char *str)
 
 	i = 0;
 	i2 = 0;
-	tab = (char**)malloc(sizeof(char) * 100);
+	tab = (char**)malloc(sizeof(char) * 1000);
 	while (str[i] == ' ' || str[i] == '\t')
 		i++;
 	while (str[i] != '\0')
@@ -30,7 +42,7 @@ char	**ft_split(char *str)
 		if (str[i] != ' ' && str[i] != '\t')
 		{
 			i3 = 0;
-			tab[i2] = (char*)malloc(sizeof(char) * 100);
+			tab[i2] = (char*)malloc(sizeof(char) * 1000);
 			while (str[i] != ' ' && str[i] != '\t' && str[i])
 			{
 				tab[i2][i3] = str[i];

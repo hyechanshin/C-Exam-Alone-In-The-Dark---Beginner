@@ -1,16 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyshin <kirikeria@gmai.com>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/06 14:49:17 by hyshin            #+#    #+#             */
+/*   Updated: 2020/10/06 14:49:39 by hyshin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strdup(char *src)
 {
@@ -31,18 +31,3 @@ char	*ft_strdup(char *src)
 	copy[i] = '\0';
 	return (copy);
 }
-
-
-int main() 
-{ 
-    char source[] = "GeeksForGeeks"; 
-    char* target = strdup(source);  
-    char source2[] = "MAPADUBU"; 
-    char* target2 = ft_strdup(source2);  
- 
-
-    printf("%s\n", target); 
-    printf("%s\n", target2); 
-
-    return 0; 
-} 

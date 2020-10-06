@@ -1,10 +1,10 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void	sort_int_tab(int *tab, unsigned int size)
+void sort_int_tab(int *tab, unsigned int size)
 {
-	unsigned int	i;
-	int				tmp;
+	unsigned int i;
+	int tmp;
 
 	i = 0;
 	while (i < size - 1)
@@ -22,21 +22,20 @@ void	sort_int_tab(int *tab, unsigned int size)
 
 void ft_print_arr(int *tab, unsigned int size)
 {
-unsigned int i = 0;
-while (i < size)
-{
-    printf("%d, ", tab[i]);
-     ++i;
-}
-printf("\n");
+	unsigned int i = 0;
+	while (i < size)
+	{
+		printf("%d, ", tab[i]);
+		i++;
+	}
+	printf("\n");
 }
 
 int      main(void)
 {
-int tab[] = { 5, -4, 3, -2, 1, 0 };
-unsigned int size = sizeof(tab) / sizeof(*tab);
- 
-ft_print_arr(tab, size);
-sort_int_tab(tab, size);
-ft_print_arr(tab, size);
+	int tab[] = {5, -4, 2, -7, 1, 0, -6};
+	unsigned int size = sizeof(tab) / sizeof(*tab);
+	ft_print_arr(tab, size);
+	sort_int_tab(tab, size);
+	ft_print_arr(tab, size);
 }

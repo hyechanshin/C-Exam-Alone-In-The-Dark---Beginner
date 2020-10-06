@@ -1,18 +1,17 @@
-#include <stdio.h>
-#include "ft_list.h"
-
+#include "test.h"
+ 
 void    ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	t_list	*list;
+	t_list *lst;
 
-	list = begin_list;
-	while (list)
+	lst = begin_list;
+	while (lst)
 	{
-		(*f)(list->data);
-		list = list->next;
+		(*f)(lst->data);
+		lst = lst->next;
 	}
 }
- 
+
 void print_arr(int *tab, unsigned int size)
 {
 unsigned int i = 0;

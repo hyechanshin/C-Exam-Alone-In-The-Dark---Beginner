@@ -1,4 +1,14 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse_bits.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyshin <kirikeria@gmai.com>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/06 14:50:59 by hyshin            #+#    #+#             */
+/*   Updated: 2020/10/06 14:51:22 by hyshin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 unsigned char	reverse_bits(unsigned char octet)
 {
@@ -13,17 +23,4 @@ unsigned char	reverse_bits(unsigned char octet)
 		octet >>= 1;
 	}
 	return (result);
-}
-
-int	main(void)
-{
-	unsigned char c;
-
-	c = 'j';
-	write(1, &c, 1);
-	write(1, "\n", 1);
-	c = reverse_bits(c);
-    write(1, &c, 1);
-	write(1, "\n", 1);
-	return (0);
 }

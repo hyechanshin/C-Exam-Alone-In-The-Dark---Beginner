@@ -14,9 +14,9 @@ int     ft_strlen(char *str)
 
 char    *ft_strdup(char *src)
 {
-    int i;
-    int len;
-    char *tmp;
+    int     i;
+    int     len;
+    char    *tmp;
 
     i = 0;
     len = ft_strlen(src);
@@ -29,19 +29,16 @@ char    *ft_strdup(char *src)
         i++;
     }
     tmp[i] = '\0';
-    return (tmp);    
+    return (tmp);
 }
 
 int main() 
 { 
-    char source[] = "GeeksForGeeks"; 
-    char* target = strdup(source);  
-    char source2[] = "MAPADUBU"; 
-    char* target2 = ft_strdup(source2);  
- 
-
+    char source[] = "GeeksForGeeks";
+    char* target = strdup(source);
+    char source2[] = "MAPADUBU";
+    char* target2 = ft_strdup(source2);
     printf("%s\n", target); 
     printf("%s\n", target2); 
-
-    return 0; 
-} 
+    return (0);
+}

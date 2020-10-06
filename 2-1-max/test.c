@@ -15,7 +15,7 @@ int		max(int *tab, unsigned int len)
     return (max);
 }
 
-int    main()
+int    main(void)
 {
     int *tab;
 

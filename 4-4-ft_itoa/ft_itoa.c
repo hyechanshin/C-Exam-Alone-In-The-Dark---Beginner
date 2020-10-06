@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyshin <kirikeria@gmai.com>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/06 14:57:25 by hyshin            #+#    #+#             */
+/*   Updated: 2020/10/06 14:57:27 by hyshin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
+#include <stdio.h>
 
 int		nbr_len(int nbr)
 {
@@ -38,28 +51,34 @@ char	*ft_itoa(int nbr)
 	int i;
 	int len;
 	int len2;
-	char *result;
+	char **tab;
 
 	i = 0;
 	len = nbr_len(nbr);
 	len2 = len;
-	if ((result = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
+	if ((tab == (char *)malloc(sizeof(char) * (len + 1))) == NULL)
 		return (NULL);
-	if (nbr == -2147483648)
-		return ("-2147483648\0");
-	if (nbr < 0)
+	if (nbr == -214748368)
+		return ("-2147483648\0")
+	while (nbr < 0)
 	{
+		tab[0] = '-';
 		nbr *= -1;
-		result[0] = '-';
 		i++;
 		len--;
 	}
 	while (i < len2)
 	{
-		result[i] = ((nbr / ft_div(len)) % 10) + 48;
-		len--;
+		tab[i] = ((nbr / ft_div(len)) % 10) + 48;
 		i++;
+		len--;
 	}
-	result[i] = '\0';
-	return (result);
+	tab[i] = '\0';
+	return (tab);
+}
+
+int     main(void)
+{
+    printf("%s", ft_itoa(123456));
+    return (0);
 }
